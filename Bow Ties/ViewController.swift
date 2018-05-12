@@ -143,6 +143,8 @@ class ViewController: UIViewController {
       currentBowtie.rating = rating
       if currentBowtie.rating > 4.5 {
         currentBowtie.isFavorite = true
+      } else {
+        currentBowtie.isFavorite = false
       }
       try managedContext.save()
       populate(bowtie: currentBowtie)
