@@ -141,6 +141,9 @@ class ViewController: UIViewController {
     
     do {
       currentBowtie.rating = rating
+      if currentBowtie.rating > 4.5 {
+        currentBowtie.isFavorite = true
+      }
       try managedContext.save()
       populate(bowtie: currentBowtie)
     } catch let error as NSError {
